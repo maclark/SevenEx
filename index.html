@@ -10,10 +10,28 @@
             //document.getElementById("setDisplay").innerText = "Sets selected: " + selectedNumber;
         }
     </script>
+
+
 </head>
 <body>
     <h1>Welcome 2 Hell</h1>
 
+    <p id="fakePlan">fake workout...</p>
+
+    <button onclick="generateWorkout()">Generate Workout</button>
+    <script>
+        function generateWorkout() {
+            console.log("calling generateWorkout");
+
+            let workout = document.getElementById("fakePlan").innerText = "a fake workout?!\nanother line?";
+            workout = document.getElementById("workoutPlan").innerText = "a new workout?!<br>another line?";
+
+            
+        }
+    </script>
+    <!-- <script>
+        document.getElementById("workoutButton").addEventListener("click", generateWorkout);
+    </script> -->
 
     <h2>Set Count:</h2>
     <select id="numberSelect" onchange="showSelectedNumber()">
@@ -24,7 +42,19 @@
             }
         </script>
     </select>
-    
 
+    <!--<p id="setDisplay">You selected: 1</p>-->
+
+
+    <p id="workoutPlan">
+        Today's Workout:
+        <br>
+        <br>
+        Set 1: <br>
+        Flappy Birds <br>
+        Reverse Crunches <br>
+        Burpies <br>
+    </p>
+    
 </body>
 </html>
