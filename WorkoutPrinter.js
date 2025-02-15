@@ -19,11 +19,24 @@ function generateWorkout() {
     let workoutHTML = "";
     
     for (let i = 1; i <= sets; i++) {
-        let selectedExercises = getRandomExercises(exercises, 3);
-        workoutHTML += `<h4>Set ${i} (${duration} sec):</h4><ul>`;
+        let selectedExercises = getRandomExercises(arms, 1);
+        workoutHTML += `<h4>Set ${i}:</h4><ul style="list-style-type:square">`;
+
+
         selectedExercises.forEach(exercise => {
             workoutHTML += `<li>${exercise}</li>`;
         });
+
+        selectedExercises = getRandomExercises(legs, 1);
+        selectedExercises.forEach(exercise => {
+            workoutHTML += `<li>${exercise}</li>`;
+        });
+
+        selectedExercises = getRandomExercises(core, 1);
+        selectedExercises.forEach(exercise => {
+            workoutHTML += `<li>${exercise}</li>`;
+        });
+
         workoutHTML += `</ul>`;
     }
 
